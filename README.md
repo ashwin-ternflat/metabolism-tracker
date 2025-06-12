@@ -27,7 +27,7 @@ This project forecasts body weight based on daily nutrition, sleep, and activity
 - Forecasts next 7 days of predicted weight using the trained model
 - Provides basic health recommendations based on user trends
 
-## Getting Started
+## How to run
 
 ### 1. Clone the Repository
 ```bash
