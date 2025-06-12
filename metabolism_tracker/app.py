@@ -6,7 +6,7 @@ import datetime
 import xgboost
 import joblib
 
-reg = joblib.load("notebooks/xgb_weight_model.pkl") # load pretrained model
+reg = joblib.load("../notebooks/xgb_weight_model.pkl") # load pretrained model
 
 conn = sqlite3.connect("metabolism_tracker.db") # load data from sqlite
 query = "SELECT * FROM metabolism_data"
