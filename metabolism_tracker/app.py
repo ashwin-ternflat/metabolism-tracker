@@ -5,10 +5,13 @@ import matplotlib.pyplot as plt
 import datetime
 import xgboost
 import joblib
+import os
 
-reg = joblib.load("../notebooks/xgb_weight_model.pkl") # load pretrained model
+model_path = os.path.join(os.path.dirname(__file__), "xgb_weight_model.pkl")
 
-conn = sqlite3.connect("metabolism_tracker.db") # load data from sqlite
+reg = joblib.load(model_path)
+
+conn = sqlite3.connect("metabolism_tracker.db") # loads data from sqlite
 query = "SELECT * FROM metabolism_data"
 df = pd.read_sql(query, conn)
 conn.close()
